@@ -28,6 +28,7 @@ document.getElementById('meterForm').addEventListener('submit', async function(e
     // 透過fetch送出到後端
     fetch('https://script.google.com/macros/s/AKfycbxdl06IFk2AzHy04Gnuv2q8ApcUJGEcygzJfN555h_3L9PQ9uwtLo7fjiCMBDNSLjJM/exec', {
       method: 'POST',
+      mode: 'no-cors',
       body: formData
     })
     .then(res => res.text())
