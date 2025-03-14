@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <title>智慧電表現場資訊填寫</title>
+</head>
+<body>
+
+<h3>智慧電表現場資訊填寫</h3>
+
+<form id="meterForm">
+
+  台電區域：
+  <select id="region">
+    <option>北區</option><option>中區</option><option>南區</option>
+  </select><br>
+
+  維運單位：
+  <select id="unit">
+    <option>北一</option><option>北二</option><option>中區</option><option>南區</option>
+  </select><br>
+
+  安裝地址(地號)：<input id="address"><br>
+  電表GPS座標：<input id="gps" readonly><br>
+
+  SiteID：<input id="siteId"><br>
+  Band：<input id="band"><br>
+  PCI：<input id="pci"><br>
+  RSRP(dBm)：<input id="rsrp"><br>
+  上傳速率(Mbps)：<input id="uploadSpeed"><br>
+  下載速率(Mbps)：<input id="downloadSpeed"><br>
+
+  訊號截圖：<input type="file" id="image1"><br>
+
+  通訊類別：
+  <select id="commType">
+    <option>LTE</option><option>NB-IoT</option><option>RF FAN</option><option>人工抄表</option>
+  </select><br>
+
+  決策原因：<input id="reason"><br>
+
+  DCU GPS位置：<input id="dcuGps"><br>
+  DCU電力供應：<input id="dcuPower"><br>
+  DCU位置台電資訊：<input id="dcuTaipowerInfo"><br>
+
+  DCU安裝地點照片：<input type="file" id="image2"><br>
+
+  環境狀況：<input id="environment"><br>
+
+  電表安裝位置照片：<input type="file" id="image3"><br>
+
+  備註一：<input id="note1"><br>
+  備註二：<input id="note2"><br>
+
+  <button type="submit">提交資料</button>
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
